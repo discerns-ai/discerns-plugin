@@ -1,4 +1,4 @@
-name: Validate plugin
+name: Validate plugins
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   validate:
-    name: Validate plugin & skills
+    name: Validate marketplace & plugins
     runs-on: ubuntu-latest
     env:
       DISABLE_AUTOUPDATER: "1"
@@ -22,8 +22,15 @@ jobs:
       - name: Install Claude Code CLI
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Validate manifest & marketplace
+      - name: Validate marketplace catalog
         run: claude plugin validate .
 
-      - name: Validate skill frontmatter & JSON
-        run: node .github/scripts/validate-skills.mjs
+      - name: Validate each plugin
+        run: |
+          status=0
+          for dir in plugins/*/; do
+            echo "::group::Validating $dir"
+            claude plugin validate "$dir" || status=1
+            echo "::endgroup::"
+          done
+          exit $status

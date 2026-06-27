@@ -1,12 +1,11 @@
 {
   "name": "discerns",
   "owner": { "name": "Discerns", "email": "info@discerns.ai" },
-  "description": "The official Discerns plugin: connect your digital brain and use it through auto-invoking skills.",
+  "description": "Official Discerns plugin marketplace — connect your digital brain and work through auto-invoking skills.",
   "plugins": [
     {
       "name": "discerns",
-      "source": "./",
-      "icon": "./assets/icon.png",
+      "source": "./plugins/discerns",
       "description": "Write in your voice, manage relationships, capture and recall knowledge, and grow your brain — powered by your Discerns digital brain.",
       "homepage": "https://github.com/discerns-ai/discerns-plugin",
       "license": "MIT",
