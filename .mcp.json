@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "discerns": {
+      "type": "http",
+      "url": "https://mcp.discerns.ai/mcp"
+    }
+  }
+}
