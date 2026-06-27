@@ -2,6 +2,7 @@
   "name": "discerns",
   "version": "0.1.0",
   "description": "Turn your Discerns digital brain into auto-invoking Claude skills: write in your voice, manage relationships, capture and recall knowledge, and grow your brain.",
+  "icon": "./assets/icon.png",
   "author": { "name": "Discerns", "url": "https://discerns.ai" },
   "homepage": "https://github.com/discerns-ai/discerns-plugin",
   "repository": "https://github.com/discerns-ai/discerns-plugin",
