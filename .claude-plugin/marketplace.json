@@ -6,6 +6,7 @@
     {
       "name": "discerns",
       "source": "./",
+      "icon": "./assets/icon.png",
       "description": "Write in your voice, manage relationships, capture and recall knowledge, and grow your brain — powered by your Discerns digital brain.",
       "homepage": "https://github.com/discerns-ai/discerns-plugin",
       "license": "MIT",
