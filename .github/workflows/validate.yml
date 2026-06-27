@@ -1,0 +1,29 @@
+name: Validate plugin
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate plugin & skills
+    runs-on: ubuntu-latest
+    env:
+      DISABLE_AUTOUPDATER: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Validate manifest & marketplace
+        run: claude plugin validate .
+
+      - name: Validate skill frontmatter & JSON
+        run: node .github/scripts/validate-skills.mjs
