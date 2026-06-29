@@ -28,6 +28,7 @@ Match the user's intent, then follow that skill:
 | Recall who someone is, prep for a meeting, or log/update a person, org, or interaction | `discerns:people` |
 | See what to teach the brain next, or be interviewed to fill gaps | `discerns:gaps` |
 | Define or change how they sound per context | `discerns:voice` |
+| Get their own take on something, or check whether a draft sounds like them ("does this sound like me?", "what's my take on X?", "would I say this?") | `discerns:voice` (consults the digital self via `ask_avatar`) |
 
 If the request is clear, route straight to the matching skill and carry on. If it spans several (e.g. "prep for my meeting with Acme and draft the follow-up"), do them in order (people → content). If it does not fit any of the above, use the discerns tools to accomplish the task based off what you think needs to be done to satisfy the user request. If you are not sure, ask the user for clarification.
 
