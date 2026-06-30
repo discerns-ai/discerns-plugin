@@ -26,7 +26,7 @@ If the artifact targets a specific person or organization, call `recall_entity` 
 Return the draft, then a short "Sources & gaps" note: claims used (with titles), assumptions made, and facts still needed.
 
 ## 6. Optional — check it sounds like them
-When voice-fit really matters, consult the avatar's own digital self before finalizing: call `ask_avatar` with the draft inline (e.g. "Here's the draft: … does this sound like me? what would you change?"). Fold its feedback into the draft, and pass its `uncertain` items back to the user to confirm — that judgment is theirs, not the avatar's. It runs a considered, multi-step consult, so reach for it as a genuine alignment check, not a per-line tic.
+When voice-fit really matters, consult the avatar's own digital self before finalizing: call `ask_avatar` with the draft inline, addressed to the avatar (e.g. "Here's the draft: … does this sound like you? what would you change?"). Fold its feedback into the draft, and pass its `uncertain` items back to the user to confirm — that judgment is theirs, not the avatar's. It runs a considered, multi-step consult, so reach for it as a genuine alignment check, not a per-line tic.
 
 ## Invariants
 - Voice ≠ facts. Never let style invent content.

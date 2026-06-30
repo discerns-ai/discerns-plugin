@@ -9,7 +9,7 @@ Styles capture how the user writes per context (email, post, chat, …). They sh
 
 ## Two modes
 - **Change how they sound** → use the style tools below (`recall_style` / `create_style` / `update_style`).
-- **Get a verdict on whether something sounds like them** ("does this sound like me?", "would I say this?", "what's my take on this?") → call `ask_avatar { message }` with the text inline. It consults the avatar's own digital self and returns feedback in the user's voice plus an `uncertain` list. Relay the feedback; ask the user to confirm the `uncertain` points (the avatar can't reach them — you can). Expand any `references` with `recall_style` / `recall_entity`, and pass the returned `conversationId` to ask follow-ups. `ask_avatar` gives the verdict; `update_style` changes how they sound.
+- **Get a verdict on whether something sounds like them** (the user asks "does this sound like me?", "would I say this?", "what's my take on this?") → call `ask_avatar { message }` with the text inline, addressed to the avatar (e.g. "does this sound like you? would you say this?"). It consults the avatar's own digital self and returns feedback in the user's voice plus an `uncertain` list. Relay the feedback; ask the user to confirm the `uncertain` points (the avatar can't reach them — you can). Expand any `references` with `recall_style` / `recall_entity`, and pass the returned `conversationId` to ask follow-ups. `ask_avatar` gives the verdict; `update_style` changes how they sound.
 
 ## Recall first
 Call `search_styles` to list existing styles, or `recall_style { query }` for one. Recall `default` to see the base voice. Always recall before updating so you extend rather than overwrite blindly.
